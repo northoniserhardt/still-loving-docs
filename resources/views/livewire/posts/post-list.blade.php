@@ -10,4 +10,12 @@
             </div>
         @endforeach
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Echo.private('App.Models.User.{{auth()->user()->id}}')
+                .notification(() => {
+                    console.log('chegou um evento');
+                });
+        });
+    </script>
 </div>

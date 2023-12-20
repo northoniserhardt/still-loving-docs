@@ -42,22 +42,7 @@ new class extends Component
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
-                    <x-dropdown align="right" width="48">
-                        <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                                <span class="rounded-full p-1 bg-red-500 text-white">17</span>
-                                <span class="material-symbols-outlined">
-                                    notifications
-                                </span>
-                            </button>
-                        </x-slot>
-
-                        <x-slot name="content">
-                            <div class="p-3 text-center">
-                                <p>some notifications</p>
-                            </div>
-                        </x-slot>
-                    </x-dropdown>
+                @livewire('components.notification')
 
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -111,22 +96,8 @@ new class extends Component
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
-            <x-dropdown align="right" width="48">
-                <x-slot name="trigger">
-                    <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <span class="rounded-full p-1 bg-red-500 text-white">17</span>
-                            <span class="material-symbols-outlined">
-                                notifications
-                            </span>
-                    </button>
-                </x-slot>
+            @livewire('components.notification')
 
-                <x-slot name="content">
-                    <div class="p-3 text-center">
-                        <p>some notifications</p>
-                    </div>
-                </x-slot>
-            </x-dropdown>
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800 dark:text-gray-200" x-data="{ name: '{{ auth()->user()->name }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
                 <div class="font-medium text-sm text-gray-500">{{ auth()->user()->email }}</div>

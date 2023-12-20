@@ -3,6 +3,7 @@
 namespace App\Livewire\Posts;
 
 use App\Models\User;
+use App\Notifications\PostCreated;
 use Livewire\Component;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,8 @@ class PostCreate extends Component
         ]);
 
         $request->user()->posts()->create($this->state);
+        $request->user()->notify(new PostCreated($request->user()->id, $this->state));
+
         $this->reset('state');
         $this->dispatch('refreshPostList');
     }
