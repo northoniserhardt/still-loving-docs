@@ -118,3 +118,12 @@ new class extends Component
         </div>
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        Echo.private('App.Models.User.{{auth()->user()->id}}')
+            .notification(() => {
+                Livewire.dispatch('refreshNotification');
+                Livewire.dispatch('refreshPostList');
+            });
+    });
+</script>
