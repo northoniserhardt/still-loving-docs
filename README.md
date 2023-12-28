@@ -1,5 +1,5 @@
 ![image](https://github.com/northoniserhardt/still-loving-docs/assets/32493494/5ff0608f-ee82-434e-aef4-f8f3cb3450d5)
-**Here, I provide the article that inspired the project, filled with pertinent information, along with a video showcasing the project's full functionality: https://dev.to/northoniserhardt/still-loving-docs-introducao-4fhe.**
+**Here, I provide the article that originated the project, filled with pertinent information, along with a video showcasing the project's full functionality: https://dev.to/northoniserhardt/still-loving-docs-introducao-4fhe.**
 
 # Motivation
 When a problem arises, what do most of us developers do with some frequency? CTRL+C + Google + CTRL+V.
